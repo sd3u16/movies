@@ -21,7 +21,8 @@ document.getElementById('secho').addEventListener('click', ()=>{
                 console.log(data);
             }
         })
-        
+
+    document.getElementById('movos').value = "";
 
 
 })
