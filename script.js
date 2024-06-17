@@ -5,7 +5,7 @@ document.getElementById('secho').addEventListener('click', ()=>{
     if(filmos.replaceAll(/\s/g,'') !== ""){
         filmos = filmos.split(' ');
 
-        fetch(`http://www.omdbapi.com/?apikey=935aa85a&s=${filmos.join('+')}`)
+        fetch(`https://www.omdbapi.com/?apikey=935aa85a&s=${filmos.join('+')}`)
             .then(res => {
                 return res.json();
             })
@@ -30,7 +30,7 @@ document.getElementById('secho').addEventListener('click', ()=>{
                     let reso = document.createElement('div');
     
                     for(let film of filmos){
-                        fetch(`http://www.omdbapi.com/?apikey=935aa85a&i=${film.imdbID}`)
+                        fetch(`https://www.omdbapi.com/?apikey=935aa85a&i=${film.imdbID}`)
                             .then(res => res.json())
                             .then(data => {
                                 
