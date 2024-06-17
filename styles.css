@@ -171,7 +171,7 @@ main{
 
     .movie{
         width: 90vw;
-        height: 18vh;
+        height: fit-content;
         
         margin-top: 5rem;
         display: flex;
@@ -236,11 +236,18 @@ main{
 
 
     header{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .hido{
+        display: none;
     }
 
     .search-box{
         width: 90%;
+        height: 7rem;
+        position: absolute;
+        top: calc(100% - 73.3vh - 3.5rem);;
     }
     .magni{
         width: 70%;
@@ -257,30 +264,114 @@ main{
         font-size: 3rem;
     }
     .fa-film{
-        font-size: 20rem;
+        font-size: 16rem;
     }
     .box__p{
-        font-size: 10rem;
+        font-size: 7rem;
     }
+
+    .scoro{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .unable{
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        color:#DFDDDD;
+        font-size: 2rem;
+
+
+    }
+
+    #movoss{
+        margin-top: 3.5rem;
+    }
+
+    .movie{
+        width: 90vw;
+        height: fit-content;
+        
+        margin-top: 5.5rem;
+        display: flex;
+        gap: 1rem;
+        border-bottom: 1.5px solid #E5E7EB;
+        padding-bottom: 2.4rem;
+        font-family: "Inter", sans-serif;
+    }
+
+    .myBtn{
+        color: #000;
+        font-weight: bold;
+
+    }
+
+    .expla{
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-top: 0.1rem;
+        
+    }
+
+    .mv-title{
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    .fa-star{
+        color: #FEC654;
+    }
+
+    .movie >img{
+        width: 25%;
+        height: 100%;
+    }
+
+    .details{
+        display: flex;
+        gap: 1.5rem;
+        font-size: 18px;
+    }
+
+    .search-box{
+        position: absolute;
+    }
+
+
+    .more button{
+        border: none;
+        background-color: #fff;
+        
+        font-size: 2.2rem;
+    }
+
+    .moren {display: none;}
 }
 
 
 @media only screen and (min-width: 992px) {
 
     header{
-        font-size: 3.5rem;
-        
+        font-size: 2.2rem;
+    }
+
+    .hido{
+        display: none;
     }
 
     .search-box{
         width: 90%;
-        height: 6.5rem;
-        top: calc(100% - 73.3vh - 3.25rem);
+        height: 7rem;
+        position: absolute;
+        top: calc(100% - 73.3vh - 3.5rem);;
     }
     .magni{
-        width: 75%;
-        gap: 3rem;
-        font-size: 3.5rem;
+        width: 70%;
+        gap: 2rem;
+        font-size: 3rem;
     }
 
     .magni input{
@@ -288,17 +379,95 @@ main{
     }
 
     .search-btn{
-        width: 25%;
-        font-size: 3.5rem;
+        width: 30%;
+        font-size: 3rem;
     }
-
     .fa-film{
-        font-size: 25rem;
+        font-size: 16rem;
+    }
+    .box__p{
+        font-size: 7rem;
     }
 
-    .box__p{
-        font-size: 12rem;
+    .scoro{
+        text-decoration: none;
+        color: #000;
     }
+
+    .unable{
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        color:#DFDDDD;
+        font-size: 2rem;
+
+
+    }
+
+    #movoss{
+        margin-top: 3.5rem;
+    }
+
+    .movie{
+        width: 90vw;
+        height: fit-content;
+        
+        margin-top: 5.5rem;
+        display: flex;
+        gap: 1rem;
+        border-bottom: 1.5px solid #E5E7EB;
+        padding-bottom: 2.4rem;
+        font-family: "Inter", sans-serif;
+    }
+
+    .myBtn{
+        color: #000;
+        font-weight: bold;
+
+    }
+
+    .expla{
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-top: 0.1rem;
+        
+    }
+
+    .mv-title{
+        display: flex;
+        gap: 0.8rem;
+    }
+
+    .fa-star{
+        color: #FEC654;
+    }
+
+    .movie >img{
+        width: 25%;
+        height: 100%;
+    }
+
+    .details{
+        display: flex;
+        gap: 1.5rem;
+        font-size: 18px;
+    }
+
+    .search-box{
+        position: absolute;
+    }
+
+
+    .more button{
+        border: none;
+        background-color: #fff;
+        
+        font-size: 2.2rem;
+    }
+
+    .moren {display: none;}
 }
 
 
@@ -349,5 +518,7 @@ main{
         height: 100%;
     }
 }
+
+
 
 
