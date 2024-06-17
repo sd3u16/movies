@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+header{
+    height: 26.7vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./cropped_img.png');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size:  100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+
+}
+
+main{
+    background-color: #fff;
+    flex-grow: 1;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: clamp(1rem, 2.2vh, 1.8rem);
+}
+
+.header__h1{
+    font-weight: 800;
+    line-height: 2.377rem;
+    letter-spacing: -4.5%;
+
+}
+
+.header__p{
+    font-weight: 700;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    color: #dfdddd;
+    text-align: center;
+
+}
+
+.fa-film{
+    font-size: clamp(4rem, 30vh, 8rem);
+}
+.box__p{
+    font-size: clamp(3rem, 12vh, 4rem);
+}
+
+.search-box{
+    width: 75vw;
+    height: 3.8rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    box-shadow: 0 1px 2px 0 #000;
+    position: fixed;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100% - 73.3vh - 1.9rem);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.magni{
+    width: 85%;
+    padding: 0.9rem 1.3rem 0.9rem 1.3rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    color: #6B7280;
+}
+
+.search-btn{
+    background-color: #fff;
+    width: 15%;
+    border: none;
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.search-btn:hover, .search-btn:focus{
+    background-color: #f1f2f3;
+}
+
+.magni input{
+    border: none;
+    font-size: 2rem;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 576px) {
+    .magni{
+        width: 70%;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+
+    }
+
+    .magni input{
+        font-size: inherit;
+    }
+
+    
+
+    .search-btn{
+        width: 35%;
+        font-size: 1.5rem;
+    }
+
+    header{
+        font-size: 1.5rem;
+    }
+
+    main{
+        justify-content: center;
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hido{
+        display: none;
+    }
+
+    .scoro{
+        text-decoration: none;
+        color: #000;
+    }
+
+    .unable{
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        color:#DFDDDD;
+        font-size: 2rem;
+
+
+    }
+
+    .movie{
+        width: 90vw;
+        height: 18vh;
+        
+        margin-top: 5rem;
+        display: flex;
+        gap: 1rem;
+        border-bottom: 1.5px solid #E5E7EB;
+        padding-bottom: 2rem;
+        font-family: "Inter", sans-serif;
+    }
+
+    .myBtn{
+        color: #000;
+        font-weight: bold;
+
+    }
+
+    .expla{
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.9rem;
+        margin-top: 0.1rem;
+        
+    }
+
+    .mv-title{
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .fa-star{
+        color: #FEC654;
+    }
+
+    .movie >img{
+        width: 25%;
+        height: 100%;
+    }
+
+    .details{
+        display: flex;
+        gap: 0.9rem;
+        font-size: 8px;
+    }
+
+    .search-box{
+        position: absolute;
+    }
+
+
+    .more button{
+        border: none;
+        background-color: #fff;
+        
+        font-size: 1rem;
+    }
+
+    .moren {display: none;}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+    header{
+        font-size: 2.5rem;
+    }
+
+    .search-box{
+        width: 90%;
+    }
+    .magni{
+        width: 70%;
+        gap: 2rem;
+        font-size: 3rem;
+    }
+
+    .magni input{
+        font-size: inherit;
+    }
+
+    .search-btn{
+        width: 30%;
+        font-size: 3rem;
+    }
+    .fa-film{
+        font-size: 20rem;
+    }
+    .box__p{
+        font-size: 10rem;
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+
+    header{
+        font-size: 3.5rem;
+        
+    }
+
+    .search-box{
+        width: 90%;
+        height: 6.5rem;
+        top: calc(100% - 73.3vh - 3.25rem);
+    }
+    .magni{
+        width: 75%;
+        gap: 3rem;
+        font-size: 3.5rem;
+    }
+
+    .magni input{
+        font-size: inherit;
+    }
+
+    .search-btn{
+        width: 25%;
+        font-size: 3.5rem;
+    }
+
+    .fa-film{
+        font-size: 25rem;
+    }
+
+    .box__p{
+        font-size: 12rem;
+    }
+}
+
+
+
+@media only screen and (min-width: 1024px) and (max-width: 2000px) {
+
+    header{
+        font-size: 2.8rem;
+        
+    }
+
+    .search-box{
+        width: 80%;
+        height: 4.2rem;
+        top: calc(100% - 73.3vh - 2.1rem);
+        position: fixed;
+    }
+    .magni{
+        width: 80%;
+        gap: 3rem;
+        font-size: 3rem;
+    }
+
+    .magni input{
+        font-size: inherit;
+    }
+
+    .search-btn{
+        width: 20%;
+        font-size: 3rem;
+    }
+
+    .fa-film{
+        font-size: 20rem;
+    }
+
+    .box__p{
+        font-size: 7rem;
+    }
+
+    .movie{
+        width: 85vw;
+        height: 35vh;
+        background-color: pink;
+    }
+    .movie >img{
+        width: 22%;
+        height: 100%;
+    }
+}
+
+
