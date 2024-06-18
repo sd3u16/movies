@@ -10,6 +10,28 @@ html{
     font-size: 62.5%;
 }
 
+:root{
+
+    --Background1: #fff;
+    --BOX-BORDER: #000;
+    --BTN-BACKGROUND: #fff;
+    --BTN-HOVER: #ffffff8f;
+    --Search-BOX: #fff;
+    --COLOR: #6B7280;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --Background1: #121212;
+        --BOX-BORDER: #000;
+        --BTN-BACKGROUND: #4b4b4b;
+        --BTN-HOVER: #635959;
+        --Search-BOX: #2E2E2F;
+        --COLOR: #fff;
+
+    }
+  }
+
 header{
     height: 26.7vh;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('./cropped_img.png');
@@ -26,8 +48,9 @@ header{
 }
 
 main{
-    background-color: #fff;
+    background-color: var(--Background1);
     flex-grow: 1;
+    color: var(--COLOR);
 }
 
 .container{
@@ -71,10 +94,10 @@ main{
     width: 75vw;
     height: 3.8rem;
     border-radius: 6px;
-    border: 1px solid #d1d5db;
+    border: 1px solid var(--BOX-BORDER);
     box-shadow: 0 1px 2px 0 #000;
     position: fixed;
-    background: #fff;
+    background: var(--Search-BOX);
     left: 50%;
     transform: translateX(-50%);
     top: calc(100% - 73.3vh - 1.9rem);
@@ -89,21 +112,21 @@ main{
     display: flex;
     gap: 2rem;
     align-items: center;
-    color: #6B7280;
+    color: var(--COLOR);
 }
 
 .search-btn{
-    background-color: #fff;
+    background-color: var(--BTN-BACKGROUND);
     width: 15%;
     border: none;
-    border: 1px solid #d1d5db;
-    background-color: #f9fafb;
+    border: 1px solid var(--BOX-BORDER);
+    background-color: var(--BTN-BACKGROUND);
     font-size: 2rem;
     cursor: pointer;
 }
 
 .search-btn:hover, .search-btn:focus{
-    background-color: #f1f2f3;
+    background-color: var(--BTN-HOVER);
 }
 
 .magni input{
@@ -138,8 +161,10 @@ main{
         font-size: 1.5rem;
     }
 
-    header{
+    .header__h1, .header__p{
         font-size: 1.5rem;
+        text-decoration: none;
+        color: #fff;
     }
 
     main{
@@ -147,7 +172,7 @@ main{
         align-items: flex-start;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .hido{
@@ -171,7 +196,7 @@ main{
 
     .movie{
         width: 90vw;
-        height: fit-content;
+        height: 250px;
         
         margin-top: 5rem;
         display: flex;
@@ -206,8 +231,8 @@ main{
     }
 
     .movie >img{
-        width: 25%;
-        height: 100%;
+        width: 120px;
+        height: 150px;
     }
 
     .details{
@@ -229,6 +254,34 @@ main{
     }
 
     .moren {display: none;}
+
+    .movie img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        height: 100%;
+    }
+
+    .wrapper{
+        height: 150px;
+        width: 120px;
+    }
+
+    .movie .expla{
+        max-width: 200px;
+    }
+    .movie{
+        justify-content: center;
+        height: fit-content;
+    }
+
+    .mv-title{
+        justify-content: space-between;
+    }
+
+    .mv-title h3{
+        width: 65%;
+    }
 }
 
 
@@ -263,8 +316,11 @@ main{
         font-size: 2.5rem;
     }
 
-    header{
+    .header__h1, .header__p{
         font-size: 2rem;
+        text-decoration: none;
+        color: #fff;
+
     }
 
     main{
@@ -355,6 +411,36 @@ main{
 
     .moren {display: none;}
 
+    .movie img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        height: 100%;
+    }
+
+    .wrapper{
+        height: 250px;
+        width: 220px;
+    }
+
+    .movie .expla{
+        max-width: 380px;
+    }
+
+
+    .movie{
+        justify-content: center;
+        height: fit-content;
+    }
+
+    .mv-title{
+        justify-content: space-between;
+    }
+
+    .mv-title h3{
+        width: 75%;
+    }
+
     
 }
 
@@ -362,8 +448,10 @@ main{
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
 
-    header{
+    .header__h1, .header__p{
         font-size: 2.2rem;
+        text-decoration: none;
+        color: #fff;
     }
 
     .hido{
@@ -476,13 +564,52 @@ main{
     }
 
     .moren {display: none;}
+
+
+
+    .movie img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        height: 100%;
+    }
+
+    .wrapper{
+        height: 270px;
+        width: 280px;
+    }
+
+    .movie .expla{
+        max-width: 500px;
+    }
+
+    .movie{
+        gap: 40px;
+    }
+
+
+    .movie{
+        justify-content: center;
+        height: fit-content;
+    }
+
+    .mv-title{
+        justify-content: space-between;
+    }
+
+    .mv-title h3{
+        width: 75%;
+    }
+
 }
 
 
 @media only screen and (min-width: 992px) {
 
-    header{
+    .header__h1, .header__p{
         font-size: 2.2rem;
+        text-decoration: none;
+        color: #fff;
     }
 
     .hido{
@@ -595,14 +722,37 @@ main{
     }
 
     .moren {display: none;}
+
+    .movie img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        height: 100%;
+    }
+
+    .wrapper{
+        height: 300px;
+        width: 280px;
+    }
+
+    .movie .expla{
+        max-width: 580px;
+    }
+
+    .movie{
+        gap: 40px;
+    }
+
 }
 
 
 
 @media only screen and (min-width: 1024px) and (max-width: 2000px) {
 
-    header{
+    .header__h1, .header__p{
         font-size: 2.5rem;
+        text-decoration: none;
+        color: #fff;
     }
 
     .hido{
@@ -715,9 +865,25 @@ main{
     }
 
     .moren {display: none;}
+
+    .movie img{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        height: 100%;
+    }
+
+    .wrapper{
+        height: 360px;
+        width: 280px;
+    }
+
+    .movie .expla{
+        max-width: 750px;
+    }
+
+    .movie{
+        gap: 40px;
+        justify-content: center;
+    }
 }
-
-
-
-
-
