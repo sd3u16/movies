@@ -41,8 +41,8 @@ document.getElementById('secho').addEventListener('click', ()=>{
                                 
                                 
                                 reso.innerHTML+=`
-                                <div class="movie">
-                        <img src="${data.Poster}">
+                                <div id="mov-${data.imdbID}" class="movie">
+                        <div class="wrapper"><img src="${data.Poster}"></div>
                         <div class="expla">
                             <div class="mv-title">
                                 <h3>${data.Title}</h3>
@@ -55,11 +55,11 @@ document.getElementById('secho').addEventListener('click', ()=>{
                             <div class="details">
                                 <p>${data.Runtime}</p>
                                 <p>${data.Genre}</p>
-                                <div class="plus-ic"><i class="fa-solid fa-circle-plus"></i> Watchlist</div>
+                                <div id="${data.imdbID}" class="plus-ic"><i class="fa-solid fa-circle-plus"></i> Watchlist</div>
                             </div>
     
                             <div class="more">
-                                <p>${data.Plot.split(0, 150)}<button id="${data.imdbID}" class="myBtn hido">...Read more</button><span class="hido">${data.Plot.split(151)}</span></p>
+                                <p>${data.Plot}</p>
                                 
                             </div>
                         </div>
@@ -70,7 +70,7 @@ document.getElementById('secho').addEventListener('click', ()=>{
     
                                 
     
-                                                       
+                                var icons = document.querySelectorAll('.plus-ic')                   
                                 var beton = document.querySelectorAll('.myBtn');
                                 console.log(beton);
                             
@@ -89,6 +89,15 @@ document.getElementById('secho').addEventListener('click', ()=>{
                                         }
     
                                         
+                                    }
+
+                                    for(let icon of icons){
+                                        icon.addEventListener('click', ()=>{
+                                            let ido = icon.id;
+                                            var movie = document.getElementById(`mov-${ido}`);
+                                           
+                                            localStorage.setItem( `${ido}`, JSON.stringify(movie.innerHTML));
+                                        })
                                     }
                                 
                                 
@@ -111,6 +120,4 @@ document.getElementById('secho').addEventListener('click', ()=>{
 
     document.getElementById('movos').value = "";
 
-
 })
-
